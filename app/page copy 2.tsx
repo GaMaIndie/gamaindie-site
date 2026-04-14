@@ -158,7 +158,7 @@ const howItWorks = [
 
 export default function GaMaIndieHomepage() {
   return (
-    <div className="min-h-screen bg-white text-slate-900 font-sans">
+    <div className="min-h-screen bg-white text-slate-900">
       <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <div className="flex items-center gap-0">
@@ -169,7 +169,7 @@ export default function GaMaIndieHomepage() {
             />
             <div className="leading-tight">
               
-              <p className="text-xl font-semibold">
+              <p className="text-xl font-bold">
                 <span className="text-cyan-600">GaMa</span>
                 <span className="text-slate-700">indie</span>
               </p>
