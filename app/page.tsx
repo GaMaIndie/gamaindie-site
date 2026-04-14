@@ -171,7 +171,7 @@ export default function GaMaIndieHomepage() {
               
               <p className="text-xl font-semibold">
                 <span className="text-cyan-600">GaMa</span>
-                <span className="text-slate-700">indie</span>
+                <span className="text-slate-700">Indie</span>
               </p>
             </div>
           </div>
