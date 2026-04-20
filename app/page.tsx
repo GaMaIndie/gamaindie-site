@@ -9,16 +9,15 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
   ArrowRight,
+  CloudOff,
+  CreditCard,
   Download,
-  ShieldCheck,
   FileText,
-  Briefcase,
-  Sparkles,
+  Store,
   Rocket,
   Mail,
   Globe,
   CheckCircle2,
-  Star,
 } from "lucide-react";
 
 const LinkedInMark = ({ className = "h-4 w-4" }: { className?: string }) => (
@@ -34,29 +33,6 @@ const InstagramMark = ({ className = "h-4 w-4" }: { className?: string }) => (
     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
   </svg>
 );
-
-const features = [
-  {
-    icon: FileText,
-    title: "Offline First",
-    desc: "Your business data stays on your system. No cloud dependency for day-to-day invoicing.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "No Subscriptions",
-    desc: "One-time purchase. Simple pricing without recurring monthly stress.",
-  },
-  {
-    icon: Briefcase,
-    title: "Built for Small Business",
-    desc: "Designed for freelancers, home businesses, shops, and service providers.",
-  },
-  {
-    icon: Sparkles,
-    title: "Clean Professional PDFs",
-    desc: "Create polished invoices and quotations that look modern and business-ready.",
-  },
-];
 
 const products = [
   {
@@ -82,14 +58,14 @@ const products = [
   },
 ];
 
-const trustItems = [
-  "Offline-first",
-  "No subscriptions",
-  "Small-business friendly",
-  "Clean professional PDFs",
+const heroBrandTags = [
+  "Simple tools",
+  "Easy to use",
+  "Built for small businesses",
+  "Clean workflows",
 ];
 
-const billAstraQuickFeatures = [
+const billAstraFeatures = [
   "Invoice & Quotation",
   "Offline Use",
   "GST Ready",
@@ -97,37 +73,29 @@ const billAstraQuickFeatures = [
   "Windows App",
 ];
 
-const whatWeBuild = [
-  {
-    title: "Business Utilities",
-    desc: "Focused tools for billing, invoicing, and small business workflows.",
-  },
-  {
-    title: "Offline Productivity Tools",
-    desc: "Software that works without cloud dependency for practical daily use.",
-  },
-  {
-    title: "Small Business Software",
-    desc: "Useful apps designed for freelancers, shops, and service businesses.",
-  },
-  {
-    title: "Upcoming Mobile Apps",
-    desc: "Simple mobile experiences that extend GaMa Indie products beyond desktop.",
-  },
+const billAstraFeatureStrip = [
+  { icon: CloudOff, title: "No Cloud Required" },
+  { icon: CreditCard, title: "One-Time License Fee" },
+  { icon: Store, title: "Small Business Friendly" },
+  { icon: FileText, title: "Clean PDFs" },
 ];
 
-const testimonials = [
+const whyUsItems = [
   {
-    name: "Freelancers & Solo Users",
-    quote: "Built to keep everyday billing simple, clean, and stress-free.",
+    title: "Works Offline",
+    desc: "No cloud dependency. Your data stays on your system.",
   },
   {
-    name: "Small Business Owners",
-    quote: "A practical tool for creating professional invoices without extra complexity.",
+    title: "Simple Pricing",
+    desc: "One-time purchase. No subscriptions.",
   },
   {
-    name: "Home & Service Businesses",
-    quote: "Designed for real work — simple setup, clear workflow, and polished output.",
+    title: "Small Business Friendly",
+    desc: "Built for freelancers, shops, and service businesses.",
+  },
+  {
+    title: "Professional Output",
+    desc: "Clean invoices and documents ready for business use.",
   },
 ];
 
@@ -159,7 +127,7 @@ const howItWorks = [
 export default function GaMaIndieHomepage() {
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans">
-      <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur">
+      <header className="sticky top-0 z-50 border-b border-[#E2F3FA]/70 bg-white/85 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <div className="flex items-center gap-0">
             <img
@@ -170,22 +138,22 @@ export default function GaMaIndieHomepage() {
             <div className="leading-tight">
               
               <p className="text-xl font-semibold">
-                <span className="text-cyan-600">GaMa</span>
+                <span className="text-[#2DA6D9]">GaMa</span>
                 <span className="text-slate-700">Indie</span>
               </p>
             </div>
           </div>
 
           <nav className="hidden items-center gap-8 text-sm text-slate-600 md:flex">
-            <a href="#products" className="transition hover:text-teal-700">Products</a>
-            <a href="#features" className="transition hover:text-teal-700">Why Us</a>
-            <a href="#projects" className="transition hover:text-teal-700">Upcoming</a>
-            <a href="#about" className="transition hover:text-teal-700">About</a>
-            <a href="#contact" className="transition hover:text-teal-700">Contact</a>
+            <a href="#products" className="transition hover:text-[#2DA6D9]">Products</a>
+            <a href="#why-us" className="transition hover:text-[#2DA6D9]">Why Us</a>
+            <a href="#projects" className="transition hover:text-[#2DA6D9]">Upcoming</a>
+            <a href="#about" className="transition hover:text-[#2DA6D9]">About</a>
+            <a href="#contact" className="transition hover:text-[#2DA6D9]">Contact</a>
           </nav>
 
           <a href="https://gamaindie.gumroad.com/l/billastra" target="_blank" rel="noreferrer">
-            <Button className="rounded-2xl bg-teal-600 px-5 hover:bg-teal-700">
+            <Button className="rounded-2xl bg-[#2DA6D9] px-5 hover:bg-[#2498C7]">
               Buy BillAstra
             </Button>
           </a>
@@ -194,21 +162,21 @@ export default function GaMaIndieHomepage() {
 
       <main>
         <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(13,148,136,0.12),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(20,184,166,0.10),transparent_30%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(45,166,217,0.12),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(45,166,217,0.10),transparent_30%)]" />
           <div className="relative mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-2 md:items-center md:py-28">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-2xl">
-              <Badge className="mb-5 rounded-full bg-teal-50 px-4 py-1 text-teal-700 hover:bg-teal-50">
+              <Badge className="mb-5 rounded-full bg-[#ECFEFF] px-4 py-1 text-[#2DA6D9] hover:bg-[#ECFEFF]">
                 Independent Software Studio
               </Badge>
               <h1 className="text-4xl font-bold tracking-tight text-slate-900 md:text-6xl">
-                Simple software. <span className="text-teal-700">Built for real work.</span>
+              Simple software.<br /><span className="text-[#2DA6D9]">Built for real work.</span>
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-                GaMa Indie creates practical software tools for small businesses, creators, and everyday workflows — clean, useful, and easy to use.
+                GaMa Indie builds focused tools for billing, documents, and daily operations—fast to learn, reliable to use, and designed for real workflows.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <a href="#products">
-                  <Button size="lg" className="rounded-2xl bg-teal-600 px-6 hover:bg-teal-700">
+                  <Button size="lg" className="rounded-2xl bg-[#2DA6D9] px-6 hover:bg-[#2498C7]">
                     Explore Products <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </a>
@@ -218,23 +186,10 @@ export default function GaMaIndieHomepage() {
                   </Button>
                 </a>
               </div>
-              <div className="mt-10 flex flex-wrap gap-6 text-sm text-slate-500">
-                <span>Offline-first</span>
-                <span>No subscriptions</span>
-                <span>Business-ready PDFs</span>
-              </div>
-              <div className="mt-8 flex flex-wrap gap-3">
-                {trustItems.map((item) => (
-                  <div key={item} className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-sm text-slate-600 shadow-sm">
-                    <CheckCircle2 className="h-4 w-4 text-teal-700" />
-                    {item}
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-8 flex flex-wrap gap-3">
-                {billAstraQuickFeatures.map((item) => (
-                  <div key={item} className="rounded-full bg-teal-50 px-4 py-2 text-sm font-medium text-teal-700">
+              <div className="mt-10 flex flex-wrap gap-3">
+                {heroBrandTags.map((item) => (
+                  <div key={item} className="inline-flex items-center gap-2 rounded-full border border-[#E2F3FA] bg-white/80 px-4 py-2 text-sm text-slate-600 shadow-[0_8px_24px_rgba(2,132,199,0.08)]">
+                    <CheckCircle2 className="h-4 w-4 text-[#2DA6D9]" />
                     {item}
                   </div>
                 ))}
@@ -242,17 +197,17 @@ export default function GaMaIndieHomepage() {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }} className="relative">
-              <div className="rounded-[2rem] border border-slate-200 bg-white p-5 shadow-2xl shadow-slate-200/60 ring-1 ring-slate-100">
+              <div className="rounded-[2rem] border border-[#E2F3FA] bg-white p-5 shadow-[0_24px_60px_rgba(2,132,199,0.14)] shadow-slate-200/60 ring-1 ring-[#E6F4FB]">
                 <div className="rounded-[1.5rem] border border-slate-100 bg-slate-50 p-5">
                   <div className="mb-4 flex items-center justify-between">
                     <div>
                       <p className="text-sm font-semibold text-slate-900">BillAstra for Windows</p>
                       <p className="text-xs text-slate-500">Invoice & Quotation Generator for Windows</p>
                     </div>
-                    <Badge className="rounded-full bg-emerald-50 text-emerald-700 hover:bg-emerald-50">Live Product</Badge>
+                    <Badge className="rounded-full bg-[#ECFEFF] text-[#2DA6D9] hover:bg-[#ECFEFF]">Live Product</Badge>
                   </div>
                   <div className="space-y-3">
-                    <div className="rounded-2xl bg-white p-4 shadow-sm">
+                    <div className="rounded-2xl bg-white p-4 shadow-[0_8px_24px_rgba(2,132,199,0.08)]">
                       <div className="mb-2 flex items-center justify-between text-sm">
                         <span className="font-medium">Invoice #INV-1828</span>
                         <span className="text-slate-500">GST Ready</span>
@@ -264,17 +219,17 @@ export default function GaMaIndieHomepage() {
                       </div>
                     </div>
                     <div className="grid grid-cols-2 gap-3">
-                      <div className="rounded-2xl bg-white p-4 shadow-sm">
+                      <div className="rounded-2xl bg-white p-4 shadow-[0_8px_24px_rgba(2,132,199,0.08)]">
                         <p className="text-xs text-slate-500">Mode</p>
                         <p className="mt-1 font-semibold">Offline</p>
                       </div>
-                      <div className="rounded-2xl bg-white p-4 shadow-sm">
+                      <div className="rounded-2xl bg-white p-4 shadow-[0_8px_24px_rgba(2,132,199,0.08)]">
                         <p className="text-xs text-slate-500">Pricing</p>
                         <p className="mt-1 font-semibold">One-Time</p>
                       </div>
                     </div>
-                    <div className="rounded-2xl bg-gradient-to-r from-teal-50 to-white p-4 shadow-sm">
-                      <p className="text-xs font-medium uppercase tracking-[0.2em] text-teal-700">Why it stands out</p>
+                    <div className="rounded-2xl bg-gradient-to-r from-[#ECFEFF] to-white p-4 shadow-[0_8px_24px_rgba(2,132,199,0.08)]">
+                      <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#2DA6D9]">Why it stands out</p>
                       <p className="mt-2 text-sm leading-6 text-slate-600">Fast billing workflow, professional invoice output, and no subscription lock-in — now available for Windows, with mobile coming soon.</p>
                     </div>
                   </div>
@@ -284,15 +239,15 @@ export default function GaMaIndieHomepage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-16">
+        <section id="why-us" className="mx-auto max-w-7xl px-6 py-16">
           <div className="mb-12 max-w-2xl">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">What We Build</p>
-            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Focused software for practical everyday work</h2>
-            <p className="mt-4 text-slate-600">GaMa Indie is built around simple, useful tools that help people get real work done with less friction.</p>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#2DA6D9]">Why Us</p>
+            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Why choose GaMa Indie</h2>
+            <p className="mt-4 text-slate-600">Simple, offline-first tools designed for small businesses and everyday work.</p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {whatWeBuild.map((item) => (
-              <Card key={item.title} className="rounded-[2rem] border-slate-200 bg-white shadow-sm">
+            {whyUsItems.map((item) => (
+              <Card key={item.title} className="rounded-[2rem] border-[#E2F3FA] bg-white shadow-[0_8px_24px_rgba(2,132,199,0.08)]">
                 <CardContent className="p-7">
                   <h3 className="text-xl font-semibold tracking-tight">{item.title}</h3>
                   <p className="mt-3 leading-7 text-slate-600">{item.desc}</p>
@@ -304,19 +259,22 @@ export default function GaMaIndieHomepage() {
 
         <section id="products" className="mx-auto max-w-7xl px-6 py-20">
           <div className="mb-12 max-w-2xl">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">Products</p>
-            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Focused tools with practical value</h2>
-            <p className="mt-4 text-slate-600">We build software that helps simplify daily work instead of making it more complicated.</p>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#2DA6D9]">Products</p>
+            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Products you can use today</h2>
+            <p className="mt-4 text-slate-600">Start with BillAstra and expand with more tools as they launch.</p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
-            {products.map((item) => (
-              <Card key={item.title} className="rounded-[2rem] border-slate-200 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            {products.map((item, index) => (
+              <Card key={item.title} className={`rounded-[2rem] border-[#E2F3FA] shadow-[0_8px_24px_rgba(2,132,199,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(2,132,199,0.12)] ${index === 0 ? 'ring-2 ring-[#2DA6D9] scale-[1.02] bg-[#ECFEFF]' : ''}`}>
                 <CardContent className="p-7">
-                  <Badge className="mb-4 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-100">{item.status}</Badge>
+                  <Badge className={`mb-4 rounded-full ${index === 0 ? 'bg-[#2DA6D9] text-white' : 'bg-slate-100 text-slate-700'} hover:bg-[#2DA6D9]/90`}>{item.status}</Badge>
                   <h3 className="text-2xl font-semibold tracking-tight">{item.title}</h3>
+                  {index === 0 && (
+                    <p className="mt-2 text-sm text-[#2DA6D9] font-medium">Recommended • Start here</p>
+                  )}
                   <p className="mt-4 leading-7 text-slate-600">{item.desc}</p>
                   <a href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">
-                    <Button variant="ghost" className="mt-6 px-0 text-teal-700 hover:bg-transparent hover:text-teal-800">
+                    <Button variant="ghost" className="mt-6 px-0 text-[#2DA6D9] hover:bg-transparent hover:text-[#2498C7]">
                       {item.cta} <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </a>
@@ -326,131 +284,122 @@ export default function GaMaIndieHomepage() {
           </div>
         </section>
 
-        <section className="border-y border-slate-200 bg-white/70">
-          <div className="mx-auto grid max-w-7xl gap-6 px-6 py-8 md:grid-cols-4">
-            {trustItems.map((item) => (
-              <div key={item} className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm">
-                <Star className="h-4 w-4 text-teal-700" />
-                <span className="text-sm font-medium text-slate-700">{item}</span>
+        <div className="bg-[#0081A7]/25 py-24">
+          <div className="space-y-20">
+            <section className="mx-auto max-w-7xl px-6">
+              <div className="rounded-[2rem] border border-[#E2F3FA] border-t-4 border-t-[#E48C57] bg-[#F07167] px-8 py-10 text-slate-900 shadow-[0_12px_32px_rgba(2,132,199,0.08)]">
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-white">Primary Product</p>
+                <h3 className="text-2xl font-semibold tracking-tight text-slate-900">BillAstra for Windows</h3>
+                <p className="mt-3 text-slate-900">A complete offline invoice & quotation solution for small businesses.</p>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  {billAstraFeatures.map((feature) => (
+                    <div
+                      key={feature}
+                      className="rounded-full border border-[#E2F3FA] bg-white px-4 py-2 text-sm font-medium text-slate-900 shadow-[0_6px_18px_rgba(2,132,199,0.08)]"
+                    >
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-6 text-slate-900">
+                  Designed to simplify billing with a fast workflow, clean PDFs, and no subscription dependency.
+                </p>
+                <a href="https://gamaindie.gumroad.com/l/billastra" target="_blank" rel="noreferrer">
+                  <Button className="mt-6 rounded-2xl bg-[#2DA6D9] px-6 hover:bg-[#2498C7]">
+                    Get BillAstra
+                  </Button>
+                </a>
               </div>
-            ))}
-          </div>
-        </section>
+            </section>
 
-        {/* Screenshots Section */}
-        <section className="mx-auto max-w-7xl px-6 py-20">
+            {/* Screenshots Section */}
+            <section className="mx-auto max-w-7xl px-6 py-20">
           <div className="mb-12 max-w-2xl">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">Product Preview</p>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#2DA6D9]">Product Preview</p>
             <h2 className="text-3xl font-bold tracking-tight md:text-4xl">See BillAstra in action</h2>
             <p className="mt-4 text-slate-600">Real screenshots showing how simple and clean your billing workflow looks.</p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-2">
             <div className="space-y-4">
-              <img src="/images/billastra-ui.png" className="rounded-2xl shadow-lg border" />
+              <img src="/images/billastra-ui.png" className="rounded-2xl shadow-[0_12px_32px_rgba(2,132,199,0.10)] border" />
               <p className="text-sm text-slate-500">Create GST invoices in minutes with an easy workflow</p>
             </div>
 
             <div className="space-y-4">
-              <img src="/images/billastra-ui-2.png" className="rounded-2xl shadow-lg border" />
+              <img src="/images/billastra-ui-2.png" className="rounded-2xl shadow-[0_12px_32px_rgba(2,132,199,0.10)] border" />
               <p className="text-sm text-slate-500">Create Professional GST Quotation easily</p>
             </div>
 
             <div className="space-y-4">
-              <img src="/images/billastra-classic.png" className="rounded-2xl shadow-lg border" />
+              <img src="/images/billastra-classic.png" className="rounded-2xl shadow-[0_12px_32px_rgba(2,132,199,0.10)] border" />
               <p className="text-sm text-slate-500">Clean and professional PDF invoices</p>
             </div>
 
             <div className="space-y-4">
-              <img src="/images/billastra-modern.png" className="rounded-2xl shadow-lg border" />
+              <img src="/images/billastra-modern.png" className="rounded-2xl shadow-[0_12px_32px_rgba(2,132,199,0.10)] border" />
               <p className="text-sm text-slate-500">Beautiful modern invoice templates</p>
             </div>
 
             <div className="space-y-4">
-              <img src="/images/billastra-compact.png" className="rounded-2xl shadow-lg border" />
+              <img src="/images/billastra-compact.png" className="rounded-2xl shadow-[0_12px_32px_rgba(2,132,199,0.10)] border" />
               <p className="text-sm text-slate-500">Compact quotation for quick service businesses</p>
             </div>
           </div>
-        </section>
+            </section>
 
-        <section className="bg-slate-50">
-          <div className="mx-auto max-w-7xl px-6 py-20">
-            <div className="mb-12 max-w-2xl">
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">How It Works</p>
-              <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Create invoices in 3 simple steps</h2>
-              <p className="mt-4 text-slate-600">BillAstra keeps your billing workflow straightforward, fast, and practical.</p>
-            </div>
+            <section>
+              <div className="mx-auto max-w-7xl px-6 py-20">
+                <div className="mb-12 max-w-2xl">
+                  <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#2DA6D9]">How It Works</p>
+                  <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Create invoices in 3 simple steps</h2>
+                  <p className="mt-4 text-slate-600">BillAstra keeps your billing workflow straightforward, fast, and practical.</p>
+                </div>
 
-            <div className="grid gap-6 md:grid-cols-3">
-              {howItWorks.map((item) => (
-                <Card key={item.step} className="rounded-[2rem] border-slate-200 bg-white shadow-sm">
-                  <CardContent className="p-7">
-                    <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-50 text-lg font-bold text-teal-700">
-                      {item.step}
-                    </div>
-                    <h3 className="text-xl font-semibold tracking-tight">{item.title}</h3>
-                    <p className="mt-3 leading-7 text-slate-600">{item.desc}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                <div className="grid gap-6 md:grid-cols-3">
+                  {howItWorks.map((item) => (
+                    <Card key={item.step} className="rounded-[2rem] border-[#E2F3FA] bg-white shadow-[0_8px_24px_rgba(2,132,199,0.08)]">
+                      <CardContent className="p-7">
+                        <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#ECFEFF] text-lg font-bold text-[#2DA6D9]">
+                          {item.step}
+                        </div>
+                        <h3 className="text-xl font-semibold tracking-tight">{item.title}</h3>
+                        <p className="mt-3 leading-7 text-slate-600">{item.desc}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </section>
           </div>
-        </section>
+        </div>
 
-        <section id="features" className="bg-slate-50">
-          <div className="mx-auto max-w-7xl px-6 py-20">
-            <div className="mb-12 max-w-2xl">
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">Why GaMa Indie</p>
-              <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Built with simplicity, clarity, and usefulness in mind</h2>
-            </div>
-            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-              {features.map((feature) => {
-                const Icon = feature.icon;
-                return (
-                  <Card key={feature.title} className="rounded-[2rem] border-slate-200 bg-white shadow-sm">
-                    <CardContent className="p-7">
-                      <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-50 text-teal-700">
-                        <Icon className="h-6 w-6" />
-                      </div>
-                      <h3 className="text-xl font-semibold">{feature.title}</h3>
-                      <p className="mt-3 leading-7 text-slate-600">{feature.desc}</p>
-                    </CardContent>
-                  </Card>
-                );
-              })}
-            </div>
+        <section className="bg-[#3A6F94] py-10 text-white">
+          <div className="mx-auto grid max-w-7xl gap-8 px-6 sm:grid-cols-2 md:grid-cols-4">
+            {billAstraFeatureStrip.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div key={item.title} className="flex flex-col items-center gap-3 text-center">
+                  <Icon className="h-7 w-7 text-white/90" />
+                  <p className="text-sm font-semibold text-white/90">{item.title}</p>
+                </div>
+              );
+            })}
           </div>
         </section>
 
         <section id="projects" className="mx-auto max-w-7xl px-6 py-20">
-          <div className="grid gap-10 rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm md:grid-cols-[1.1fr_0.9fr] md:p-12">
+          <div className="grid gap-10 rounded-[2rem] border border-[#E2F3FA] bg-white p-8 shadow-[0_8px_24px_rgba(2,132,199,0.08)] md:grid-cols-[1.1fr_0.9fr] md:p-12">
             <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">Upcoming</p>
-              <h2 className="text-3xl font-bold tracking-tight md:text-4xl">More practical tools are on the way</h2>
-              <p className="mt-5 max-w-2xl leading-8 text-slate-600">GaMa Indie is growing into a focused product studio for useful software — especially tools that help small businesses and solo users work better.</p>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#2DA6D9]">Upcoming</p>
+              <h2 className="text-3xl font-bold tracking-tight md:text-4xl">More tools coming soon</h2>
+              <p className="mt-5 max-w-2xl leading-8 text-slate-600">We’re expanding with tools for expenses, documents, and simple business workflows—built with the same offline-first approach.</p>
             </div>
             <div className="space-y-4">
               {upcomingItems.map((item) => (
-                <div key={item} className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-slate-50 px-5 py-4">
-                  <Rocket className="h-5 w-5 text-teal-700" />
+                <div key={item} className="flex items-center gap-4 rounded-2xl border border-[#E2F3FA] bg-slate-50 px-5 py-4">
+                  <Rocket className="h-5 w-5 text-[#2DA6D9]" />
                   <span className="font-medium text-slate-700">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-7xl px-6 py-8 md:py-14">
-          <div className="rounded-[2rem] border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-8 shadow-sm md:p-12">
-            <div className="mb-8 max-w-2xl">
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">Built for Real Users</p>
-              <h2 className="text-3xl font-bold tracking-tight md:text-4xl">A calmer, cleaner way to work with business tools</h2>
-            </div>
-            <div className="grid gap-6 md:grid-cols-3">
-              {testimonials.map((item) => (
-                <div key={item.name} className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
-                  <p className="text-base leading-7 text-slate-600">“{item.quote}”</p>
-                  <p className="mt-5 font-semibold text-slate-900">{item.name}</p>
                 </div>
               ))}
             </div>
@@ -460,23 +409,23 @@ export default function GaMaIndieHomepage() {
         <section id="about" className="bg-slate-50">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
             <div className="max-w-3xl">
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">About</p>
-              <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Independent software, made with purpose</h2>
-              <p className="mt-6 text-lg leading-8 text-slate-600">GaMa Indie is a small independent software brand focused on building useful, affordable, and thoughtfully designed digital tools. We care about clarity, clean workflows, and software that actually helps.</p>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#2DA6D9]">About</p>
+              <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Independent software, built with focus</h2>
+              <p className="mt-6 text-lg leading-8 text-slate-600">GaMa Indie is an independent studio building focused, affordable tools. We prioritize clarity, speed, and software that solves everyday tasks.</p>
             </div>
           </div>
         </section>
 
         <section id="contact" className="mx-auto max-w-7xl px-6 py-20"> 
-          <div className="rounded-[2rem] bg-linear-to-r from-teal-600 to-cyan-600 px-8 py-12 text-white shadow-2xl shadow-teal-200 lg:px-12">
+          <div className="rounded-[2rem] bg-linear-to-r from-[#2DA6D9] to-[#2DA6D9] px-8 py-12 text-white shadow-[0_24px_60px_rgba(2,132,199,0.14)] shadow-[#2DA6D9]/20 lg:px-12">
             <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-start">
               <div>
-                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-teal-100">Start Here</p>
+                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-blue-100">Start Here</p>
                 <h2 className="text-3xl font-bold tracking-tight md:text-5xl">Start with BillAstra for Windows</h2>
-                <p className="mt-5 max-w-2xl text-lg leading-8 text-teal-50/90">A clean offline invoice & quotation generator built for small business work on Windows — with BillAstra for Mobile coming soon.</p>
+                <p className="mt-5 max-w-2xl text-lg leading-8 text-blue-50">An offline invoice & quotation app for Windows—fast billing, clean PDFs, and no subscriptions. Mobile version coming soon.</p>
                 <div className="mt-8 max-w-md space-y-4">
                   <a href="https://gamaindie.gumroad.com/l/billastra" target="_blank" rel="noreferrer" className="block">
-                    <Button size="lg" className="w-full rounded-2xl bg-white px-6 py-6 text-teal-700 hover:bg-slate-100">
+                    <Button size="lg" className="w-full rounded-2xl bg-white px-6 py-6 text-[#2DA6D9] hover:bg-slate-100">
                       <Download className="mr-2 h-5 w-5" /> Buy BillAstra
                     </Button>
                   </a>
@@ -488,10 +437,10 @@ export default function GaMaIndieHomepage() {
                 </div>
               </div>
 
-              <div className="rounded-[2rem] bg-white/95 p-8 text-slate-900 shadow-xl">
+              <div className="rounded-[2rem] bg-white/95 p-8 text-slate-900 shadow-[0_16px_40px_rgba(2,132,199,0.12)]">
                 <div className="mb-8">
                   <p className="text-sm font-medium text-slate-500">Email</p>
-                  <a href="mailto:hello@gamaindie.com" className="mt-2 inline-block text-2xl font-semibold tracking-tight text-slate-900 hover:text-teal-700">hello@gamaindie.com</a>
+                  <a href="mailto:hello@gamaindie.com" className="mt-2 inline-block text-2xl font-semibold tracking-tight text-slate-900 hover:text-[#2DA6D9]">hello@gamaindie.com</a>
                 </div>
                 <div className="grid gap-4 md:grid-cols-2">
                   <a href="https://www.linkedin.com/company/112818648/admin/dashboard/" target="_blank" rel="noreferrer" className="rounded-2xl bg-slate-100 p-5 transition hover:bg-slate-200/70">
@@ -515,14 +464,14 @@ export default function GaMaIndieHomepage() {
         </section>
       </main>
 
-      <footer className="border-t border-slate-200 bg-gradient-to-b from-white to-slate-50">
+      <footer className="border-t border-[#E2F3FA] bg-gradient-to-b from-white to-slate-50">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
           <p>© 2026 GaMa Indie. All rights reserved.</p>
           <div className="flex items-center gap-5">
-            <a href="https://gamaindie.gumroad.com/l/billastra" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-teal-700">
+            <a href="https://gamaindie.gumroad.com/l/billastra" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-[#2DA6D9]">
               <Globe className="h-4 w-4" /> Gumroad
             </a>
-            <a href="mailto:hello@gamaindie.com" className="hover:text-teal-700">Email</a>
+            <a href="mailto:hello@gamaindie.com" className="hover:text-[#2DA6D9]">Email</a>
           </div>
         </div>
       </footer>
